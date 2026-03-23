@@ -4,8 +4,8 @@ from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 # Load data
-movies = pd.read_csv(r'C:\Users\hp\Documents\Projects\movie_recommender\data\tmdb_5000_movies.csv')
-credits = pd.read_csv(r'C:\Users\hp\Documents\Projects\movie_recommender\data\tmdb_5000_credits.csv')
+movies = pd.read_csv('data/tmdb_5000_movies.csv')
+credits = pd.read_csv('data/tmdb_5000_credits.csv')
 
 movies = movies.merge(credits, on='title')
 movies = movies[['movie_id','title','overview','genres','keywords','cast','crew']]
